@@ -1,0 +1,45 @@
+---
+type Props = {
+  kind: "youtube" | "projects" | "x" | "contact";
+};
+
+const { kind } = Astro.props;
+---
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.8"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  {kind === "youtube" && (
+    <g>
+      <path d="M21 7.5a2.5 2.5 0 0 0-1.8-1.8C17.6 5.25 12 5.25 12 5.25s-5.6 0-7.2.45A2.5 2.5 0 0 0 3 7.5c-.45 1.6-.45 4.5-.45 4.5s0 2.9.45 4.5a2.5 2.5 0 0 0 1.8 1.8c1.6.45 7.2.45 7.2.45s5.6 0 7.2-.45a2.5 2.5 0 0 0 1.8-1.8c.45-1.6.45-4.5.45-4.5s0-2.9-.45-4.5Z" />
+      <path d="m10 9 5 3-5 3V9Z" fill="currentColor" stroke="none" />
+    </g>
+  )}
+  {kind === "projects" && (
+    <g>
+      <path d="M8.5 5.5H5.75A1.75 1.75 0 0 0 4 7.25v9.5a1.75 1.75 0 0 0 1.75 1.75H8.5M15.5 5.5h2.75A1.75 1.75 0 0 1 20 7.25v9.5a1.75 1.75 0 0 1-1.75 1.75H15.5" />
+      <path d="m14 8-4 8" />
+      <circle cx="7" cy="11" r=".7" fill="currentColor" stroke="none" />
+      <circle cx="17" cy="14" r=".7" fill="currentColor" stroke="none" />
+    </g>
+  )}
+  {kind === "x" && (
+    <g>
+      <path d="M4.5 4.5h4.2l10.8 15h-4.2L4.5 4.5Z" />
+      <path d="m19.5 4.5-6.1 7.1M4.5 19.5l6.1-7.1" />
+    </g>
+  )}
+  {kind === "contact" && (
+    <g>
+      <rect x="3.25" y="5.25" width="17.5" height="13.5" rx="1.8" />
+      <path d="m4 6.5 8 6 8-6M4.25 17.5l5-4M19.75 17.5l-5-4" />
+    </g>
+  )}
+</svg>

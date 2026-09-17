@@ -1,0 +1,23 @@
+---
+import { siteData } from "../data/site";
+
+type Props = {
+  title?: string;
+};
+
+const { title } = Astro.props;
+const pageTitle = title ?? siteData.identity.name + " — Teknolojiye meraklı bir kanal";
+---
+<!doctype html>
+<html lang={siteData.identity.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#071426" />
+    <meta name="description" content={siteData.home.description} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

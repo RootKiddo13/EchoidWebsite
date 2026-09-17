@@ -1,0 +1,16 @@
+---
+import LinkGlyph from "./LinkGlyph.astro";
+
+type Props = {
+  email: string;
+};
+
+const { email } = Astro.props;
+---
+<address class="home-link-row home-contact-row">
+  <span class="home-link-icon"><LinkGlyph kind="contact" /></span>
+  <span class="home-contact-copy">
+    <span class="home-contact-label">İletişim</span>
+    <span class="home-contact-email">{email}</span>
+  </span>
+</address>

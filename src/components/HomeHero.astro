@@ -1,0 +1,42 @@
+---
+import { siteData } from "../data/site";
+import HomeContactRow from "./HomeContactRow.astro";
+import HomeLinkRow from "./HomeLinkRow.astro";
+import AboutModal from "./AboutModal.astro";
+import SiteHeader from "./SiteHeader.astro";
+---
+<main class="home-page">
+  <a class="skip-link" href="#home-content">Ana içeriğe geç</a>
+  <section class="hero" aria-labelledby="home-title">
+    <img
+      class="hero-art"
+      src="/assets/brand/echoid-website-hero-selected-v1.png"
+      alt=""
+      aria-hidden="true"
+      width="1672"
+      height="941"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <SiteHeader />
+    <AboutModal />
+
+    <div class="hero-content" id="home-content" tabindex="-1">
+      <p class="hero-kicker"><span aria-hidden="true"></span>{siteData.home.kicker}</p>
+      <h1 id="home-title">{siteData.identity.name}</h1>
+      <p class="hero-tagline">{siteData.home.tagline}</p>
+      <p class="hero-description">{siteData.home.description}</p>
+
+      <nav class="home-links" aria-label="Echoid bağlantıları">
+        {siteData.links.map((link) => <HomeLinkRow link={link} />)}
+        <HomeContactRow email={siteData.contact.email} />
+      </nav>
+    </div>
+
+    <footer class="hero-footer">
+      <span>{siteData.about.footer}</span>
+    </footer>
+  </section>
+</main>

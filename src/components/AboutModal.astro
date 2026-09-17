@@ -1,0 +1,55 @@
+---
+import { siteData } from "../data/site";
+---
+<dialog
+  class="about-dialog"
+  id="about-dialog"
+  aria-labelledby="about-dialog-title"
+  data-about-dialog
+>
+  <div class="about-dialog-inner">
+    <button class="about-close" type="button" aria-label="Hakkında penceresini kapat" data-about-close>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </svg>
+    </button>
+    <p class="about-eyebrow">ECHOID / HAKKINDA</p>
+    <h2 id="about-dialog-title" tabindex="-1">{siteData.about.title}</h2>
+    {siteData.about.paragraphs.map((paragraph) => <p class="about-copy">{paragraph}</p>)}
+  </div>
+</dialog>
+
+<script>
+  const trigger = document.querySelector<HTMLButtonElement>("[data-about-trigger]");
+  const dialog = document.querySelector<HTMLDialogElement>("[data-about-dialog]");
+  const closeButton = document.querySelector<HTMLButtonElement>("[data-about-close]");
+  const title = document.querySelector<HTMLElement>("#about-dialog-title");
+
+  if (trigger && dialog && closeButton && title) {
+    trigger.addEventListener("click", () => {
+      if (dialog.open) return;
+      dialog.showModal();
+      trigger.setAttribute("aria-expanded", "true");
+      title.focus({ preventScroll: true });
+    });
+
+    closeButton.addEventListener("click", () => dialog.close());
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target !== dialog) return;
+      const bounds = dialog.getBoundingClientRect();
+      const clickIsOutside =
+        event instanceof MouseEvent &&
+        (event.clientX < bounds.left ||
+          event.clientX > bounds.right ||
+          event.clientY < bounds.top ||
+          event.clientY > bounds.bottom);
+      if (clickIsOutside) dialog.close();
+    });
+
+    dialog.addEventListener("close", () => {
+      trigger.setAttribute("aria-expanded", "false");
+      trigger.focus({ preventScroll: true });
+    });
+  }
+</script>

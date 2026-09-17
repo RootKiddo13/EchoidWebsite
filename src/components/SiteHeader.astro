@@ -1,0 +1,23 @@
+---
+import { siteData } from "../data/site";
+---
+<header class="site-header">
+  <a class="brand-lockup" href="/" aria-label={siteData.identity.name + " ana sayfa"}>
+    <span class="brand-mark" aria-hidden="true">E</span>
+    <span class="brand-divider" aria-hidden="true">/</span>
+    <span class="brand-name">{siteData.identity.name}</span>
+  </a>
+  <div class="header-actions">
+    <span class="header-note">TEKNOLOJİ · MERAK · KEŞİF</span>
+    <button
+      class="about-trigger"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="about-dialog"
+      aria-expanded="false"
+      data-about-trigger
+    >
+      Hakkında
+    </button>
+  </div>
+</header>
