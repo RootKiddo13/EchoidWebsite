@@ -175,3 +175,12 @@
 - Verified the repository visibility is PRIVATE and the local branch is synchronized with `origin/main`.
 - Build output, dependencies, Astro cache, and environment files are excluded by `.gitignore`; no Cloudflare connection or public deployment has been made.
 - Next: user review of the local preview, then Cloudflare Pages Free setup after design and public destinations are confirmed.
+
+## 2026-09-18 — Public release — PASS
+
+- User reviewed the current site and explicitly approved publication.
+- Connected the private `RootKiddo13/EchoidWebsite` repository to Cloudflare Pages Free; configured production branch `main`, build command `npm run build`, and output directory `dist`.
+- Cloudflare completed the production build and deployment successfully at `https://echoid.pages.dev/`; the live page loaded with its title, Home content, YouTube, GitHub, X, Contact, and About control.
+- Hosting remains $0 on the provider-assigned `pages.dev` hostname. No paid domain or service was enabled.
+- Git integration has production automatic deployments enabled; review and approve website changes before pushing to `main`.
+- Deployment commit: `2aaae40035bcd7ad3021e02b3d6686571304deee`.

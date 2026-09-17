@@ -2,14 +2,14 @@
 
 ## Current state
 
-- State: PASS — ready for human review
-- Phase: 01–06 complete; Specs 07–08 complete
+- State: PASS — deployed to production at https://echoid.pages.dev/
+- Phase: Specs 01–08 complete; first public release complete
 - Spec: specs/README.md
 - Builder: Phases 01–06 and Specs 07–08 complete; reports/agent-loop/phase-04-final-review.md, phase-05-review.md, and phase-06-review.md.
 - Reviewer: Reduced-motion, modal close/focus, keyboard, responsive, build, link, asset, and console checks pass.
 - Fixer: not required; no release-readiness implementation finding remains.
 - Started: 2026-09-17
-- Last update: 2026-09-17
+- Last update: 2026-09-18
 
 ## Completed phases
 
@@ -21,6 +21,7 @@
 - Phase 04 — About Interaction final reduced-motion runtime check: PASS. Review: reports/agent-loop/phase-04-final-review.md.
 - Phase 05 — Responsive and Accessibility: PASS. Review: reports/agent-loop/phase-05-review.md.
 - Phase 06 — Polish and Performance: PASS for technical checks. Review: reports/agent-loop/phase-06-review.md.
+- Release — Cloudflare Pages Free deployment: PASS. Public URL: https://echoid.pages.dev/. User reviewed and approved the release on 2026-09-18; deployment commit: 2aaae40035bcd7ad3021e02b3d6686571304deee.
 
 ## Phase 03 evidence
 
@@ -32,4 +33,4 @@
 
 ## Current handoff
 
-Implementation and technical release-readiness checks are complete. The full design remains partially locked; keep the site local until the user reviews the preview and confirms the public GitHub and Contact destinations. The private GitHub repository is ready at `https://github.com/RootKiddo13/EchoidWebsite`. After review, connect it to Cloudflare Pages Free and publish only at zero cost on the generated `pages.dev` hostname. Do not buy a domain or enable paid services.
+The reviewed site is live at `https://echoid.pages.dev/` on Cloudflare Pages Free ($0). The GitHub repository remains private at `https://github.com/RootKiddo13/EchoidWebsite`; production deploys automatically from `main`, so review and approve website changes before pushing them. Do not buy a domain or enable paid services.

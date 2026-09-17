@@ -65,7 +65,7 @@ Bir faz; builder kapsamı bitirdiğinde, reviewer kabul ölçütlerini ve build/
 
 ## Start gate
 
-- State: BUILDING
-- Current phase: 01 — Project Bootstrap
-- User authorized implementation on 2026-09-17.
-- Open layout and copy remain preview proposals pending review before publication.
+- State: PASS — first public release completed 2026-09-18.
+- Completed: Specs 01–08, review, and Cloudflare Pages deployment.
+- Production URL: https://echoid.pages.dev/.
+- The user reviewed and explicitly approved the current site before publication. Review future production changes before pushing them to `main`.

@@ -25,4 +25,7 @@ These are user-provided destinations. Keep them centralized in the site data lay
 ## Publishing
 
 - Hosting budget: **$0**. Use free hosting and a provider-assigned subdomain only; do not buy a domain or enable paid services for this project.
-- No automatic publishing; a person reviews the website before publication.
+- Hosting provider: Cloudflare Pages Free.
+- Public URL: https://echoid.pages.dev/.
+- First production deployment: PASS on 2026-09-18 after the user reviewed and explicitly approved the site.
+- Cloudflare's Git integration automatically deploys commits to the production branch. Review and approve website changes before pushing them to `main`.

@@ -1,6 +1,6 @@
 # Echoid Website — Design Decisions
 
-**State: PARTIALLY LOCKED — implementation preview authorized 2026-09-17; proposed layout and copy remain unapproved until reviewed.**
+**State: APPROVED — the current website design, copy, interactions, and destinations were reviewed and approved for publication on 2026-09-18.**
 
 This file records the status of design decisions. Entries marked **Approved** are user-approved. Entries marked **Preview proposal** may be implemented as a reversible review draft after the user authorizes implementation; they are not final or publication-approved.
 
@@ -13,7 +13,7 @@ This file records the status of design decisions. Entries marked **Approved** ar
 - **Brand direction:** follow Echoid's canonical matte, flat-shaded 3D identity. Preserve the established fedora, grey high-collar coat, simple face, night-blue atmosphere, and restrained amber lighting.
 - **Destinations:** use the YouTube, X, GitHub, and Contact values in const.md.
 
-## Open for design review
+## Approved design decisions
 
 - Exact desktop composition, text placement, and hero crop.
 - Mobile composition and art positioning.
@@ -29,7 +29,9 @@ This file records the status of design decisions. Entries marked **Approved** ar
 - Canonical Echoid brief: path in const.md
 - Structural reference: ../RKWebsite/
 
-## Preview proposals — pending review
+## Approved website design — 2026-09-18
+
+The user reviewed the current implementation and explicitly approved publishing it. The following implemented layout, copy, and interaction choices are approved for release:
 
 - Desktop: keep Echoid and the desk artwork on the left; place the readable content and destination list in the open right side of the selected hero.
 - Mobile: keep the artwork focal point near the top and let the content flow below it in one column.
@@ -40,9 +42,9 @@ This file records the status of design decisions. Entries marked **Approved** ar
 - About copy: “Echoid’de teknolojiye şöyle bir bakıp geçmiyoruz; nasıl çalıştığını da merak edip kurcalıyoruz. Yapay zekâdan yazılıma, aklımıza takılan konuları beraber araştırıyor, öğrendiklerimizi de sade ve keyifli bir dille seninle paylaşıyoruz. Aklına takılan bir şey varsa, gel beraber keşfedelim.”
 - Footer: “MERAK ETMEYE DEVAM.”
 - Contact: show the confirmed email as readable text, following the static contact-row pattern from RKWebsite.
-- About interaction: add a compact “Hakkında” text button at the right side of the header; open a centered, dark-navy dialog with a restrained amber edge, a small eyebrow, the existing About title and paragraph, and a top-right close control. Close with the control, Escape, or a click outside the panel. This is a reversible preview choice, pending user review.
-- About panel motion: adapt RootKiddo's About description treatment to Echoid: a short backdrop fade and roughly 8px panel fade-and-rise on opening, plus a slight panel lift with a restrained amber edge/shadow on hover-capable devices. Disable movement for reduced-motion users. This is a reversible preview proposal; do not copy RootKiddo's palette or identity details.
-- User-directed copy/scale refinement (Spec 07): use the warmer Home and About wording above, replace the channel-category kicker with “TEKNOLOJİYE MERAKLI MISIN?”, and raise the marked Home typography/link-row scale and About copy size modestly. Preserve the current composition and keep this review preview pending.
-- User-directed Contact hover refinement (Spec 08): on hover-capable devices, give the static Contact row the other links' amber border response, with a small card lift/shadow and envelope-icon motion. Reduced-motion users get no movement. Preserve the readable email and non-interactive `<address>` behavior; this remains a preview refinement.
+- About interaction: add a compact “Hakkında” text button at the right side of the header; open a centered, dark-navy dialog with a restrained amber edge, a small eyebrow, the existing About title and paragraph, and a top-right close control. Close with the control, Escape, or a click outside the panel. Approved as part of the reviewed release.
+- About panel motion: adapt RootKiddo's About description treatment to Echoid: a short backdrop fade and roughly 8px panel fade-and-rise on opening, plus a slight panel lift with a restrained amber edge/shadow on hover-capable devices. Disable movement for reduced-motion users. Preserve Echoid's palette and identity. Approved as part of the reviewed release.
+- User-directed copy/scale refinement (Spec 07): use the warmer Home and About wording above, replace the channel-category kicker with “TEKNOLOJİYE MERAKLI MISIN?”, and raise the marked Home typography/link-row scale and About copy size modestly. Preserve the current composition. Approved as part of the reviewed release.
+- User-directed Contact hover refinement (Spec 08): on hover-capable devices, give the static Contact row the other links' amber border response, with a small card lift/shadow and envelope-icon motion. Reduced-motion users get no movement. Preserve the readable email and non-interactive `<address>` behavior. Approved as part of the reviewed release.
 
-These layout and copy choices are implementation preview proposals, not user-approved final content.
+The implementation above is the reviewed release version. Future changes still require review before their production commit is pushed.
