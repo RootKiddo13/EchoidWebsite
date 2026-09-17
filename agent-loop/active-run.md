@@ -32,4 +32,4 @@
 
 ## Current handoff
 
-Implementation and technical release-readiness checks are complete. The full design remains partially locked; keep the site local until the user reviews the production preview and confirms the public GitHub and Contact destinations. Then create/use a private GitHub repo, connect Cloudflare Pages Free, and publish only at zero cost on the generated `pages.dev` hostname. Do not buy a domain or enable paid services.
+Implementation and technical release-readiness checks are complete. The full design remains partially locked; keep the site local until the user reviews the preview and confirms the public GitHub and Contact destinations. The private GitHub repository is ready at `https://github.com/RootKiddo13/EchoidWebsite`. After review, connect it to Cloudflare Pages Free and publish only at zero cost on the generated `pages.dev` hostname. Do not buy a domain or enable paid services.

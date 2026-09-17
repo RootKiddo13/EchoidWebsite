@@ -168,3 +168,10 @@
 - Completed About dialog reduced-motion and dismissal/focus checks, four viewport checks, keyboard navigation, link/data verification, asset loading, and console checks.
 - Recorded final evidence in `reports/agent-loop/phase-04-final-review.md`, `phase-05-review.md`, and `phase-06-review.md`; responsive and reduced-motion screenshots are saved beside the reports.
 - Confirmed the project has no local Git repository or root environment file. Publishing remains gated on the user's full design review and confirmation of the public GitHub and Contact destinations.
+
+## 2026-09-17 — Private GitHub repository prepared
+
+- Initialized Git on `main` and pushed the project to `https://github.com/RootKiddo13/EchoidWebsite` as a private repository.
+- Verified the repository visibility is PRIVATE and the local branch is synchronized with `origin/main`.
+- Build output, dependencies, Astro cache, and environment files are excluded by `.gitignore`; no Cloudflare connection or public deployment has been made.
+- Next: user review of the local preview, then Cloudflare Pages Free setup after design and public destinations are confirmed.
