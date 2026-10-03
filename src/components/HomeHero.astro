@@ -4,6 +4,19 @@ import HomeContactRow from "./HomeContactRow.astro";
 import HomeLinkRow from "./HomeLinkRow.astro";
 import AboutModal from "./AboutModal.astro";
 import SiteHeader from "./SiteHeader.astro";
+
+const tagline = siteData.home.tagline;
+const lineBreakAfter = siteData.home.taglineLineBreakAfter;
+const lineBreakEnd = tagline.indexOf(lineBreakAfter) + lineBreakAfter.length;
+const emphasisStart = tagline.indexOf(siteData.home.taglineEmphasis, lineBreakEnd);
+const hasTaglineTreatment = lineBreakEnd > lineBreakAfter.length && emphasisStart >= lineBreakEnd;
+const taglineFirstLine = hasTaglineTreatment ? tagline.slice(0, lineBreakEnd) : tagline;
+const taglineBeforeEmphasis = hasTaglineTreatment
+  ? tagline.slice(lineBreakEnd, emphasisStart).trim()
+  : "";
+const taglineAfterEmphasis = hasTaglineTreatment
+  ? tagline.slice(emphasisStart + siteData.home.taglineEmphasis.length).trim()
+  : "";
 ---
 <main class="home-page">
   <a class="skip-link" href="#home-content">Ana içeriğe geç</a>
@@ -25,13 +38,24 @@ import SiteHeader from "./SiteHeader.astro";
 
     <div class="hero-content" id="home-content" tabindex="-1">
       <p class="hero-kicker"><span aria-hidden="true"></span>{siteData.home.kicker}</p>
-      <h1 id="home-title">{siteData.identity.name}</h1>
-      <p class="hero-tagline">{siteData.home.tagline}</p>
+      <h1 id="home-title" aria-label={tagline}>
+        {hasTaglineTreatment ? (
+          <>
+            <span>{taglineFirstLine}</span>
+            <br />
+            <span>{taglineBeforeEmphasis} </span>
+            <span class="hero-title-accent">{siteData.home.taglineEmphasis}</span>
+            <span> {taglineAfterEmphasis}</span>
+          </>
+        ) : (
+          <span>{tagline}</span>
+        )}
+      </h1>
       <p class="hero-description">{siteData.home.description}</p>
 
       <nav class="home-links" aria-label="Echoid bağlantıları">
         {siteData.links.map((link) => <HomeLinkRow link={link} />)}
-        <HomeContactRow email={siteData.contact.email} />
+        <HomeContactRow email={siteData.contact.email} keywords={siteData.contact.keywords} />
       </nav>
     </div>
 

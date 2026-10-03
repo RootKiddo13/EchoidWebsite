@@ -184,3 +184,11 @@
 - Hosting remains $0 on the provider-assigned `pages.dev` hostname. No paid domain or service was enabled.
 - Git integration has production automatic deployments enabled; review and approve website changes before pushing to `main`.
 - Deployment commit: `2aaae40035bcd7ad3021e02b3d6686571304deee`.
+
+## 2026-10-03 — Spec 09 global typography and home links — PASS
+
+- Implemented approved preview direction 03 in the existing Astro page structure: one self-hosted IBM Plex Sans variable font across the site, smaller two-tone headline, approved keyword descriptors, and enlarged 2×2 desktop destination cards with a narrow one-column layout.
+- Preserved the selected hero art, destination URLs/order, About dialog, Contact `<address>` and email, hover/reduced-motion behavior, header, and footer.
+- `npm run check:data`, `npm run build`, and `git diff --check` passed. Independent source/build reviewer returned PASS; after review found the missing amber “AÇIDAN” emphasis, the implementation was corrected and re-reviewed.
+- Browser-rendered desktop/mobile visuals, live console, and runtime font glyph checks were not performed. No push or deployment was made.
+- Handoff and review: `agent-loop/spec-09-builder-handoff.md`, `reports/agent-loop/spec-09-review.md`.

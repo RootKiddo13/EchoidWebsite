@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echoid — Tasarım yönü 01</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; --night:#071426; --deep:#030b18; --amber:#eeb56a; --paper:#f4f0e8; --muted:#b7bdc8; --rule:rgba(244,240,232,.18); }
+    * { box-sizing:border-box; }
+    html,body { margin:0; min-height:100%; background:var(--night); color:var(--paper); }
+    body { font-family:'IBM Plex Sans',Arial,sans-serif; }
+    .page { min-height:100vh; padding:0 clamp(28px,7vw,104px); display:flex; flex-direction:column; }
+    header { height:82px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--rule); }
+    .brand { display:flex; align-items:center; gap:13px; font-size:13px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+    .mark { width:28px;height:28px;border:1px solid var(--amber);border-radius:50%;display:grid;place-items:center;color:var(--amber);font:12px 'Newsreader',serif;letter-spacing:0; }
+    .nav { color:var(--muted);font-size:13px;letter-spacing:.02em; }
+    .nav span { color:var(--amber);margin-left:8px; }
+    main { width:min(1240px,100%); margin:auto; padding:48px 0 38px; }
+    .intro { display:grid; grid-template-columns:1fr .92fr; align-items:center; gap:clamp(36px,6vw,84px); margin-bottom:38px; }
+    .copy { max-width:590px; }
+    .kicker { margin:0 0 21px; color:var(--amber);font-size:12px;letter-spacing:.07em;font-weight:600; }
+    h1 { max-width:600px; margin:0; font:500 clamp(48px,5.3vw,76px)/.99 'Newsreader',Georgia,serif; letter-spacing:-.045em; }
+    .description { max-width:540px;margin:24px 0 0;color:#d0d4db;font-size:17px;line-height:1.62; }
+    figure { margin:0; height:318px; overflow:hidden; border:1px solid rgba(238,181,106,.38); background:#030b18; }
+    figure img { display:block;width:100%;height:100%;object-fit:cover;object-position:23% 54%; }
+    .links { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px; }
+    .card { min-height:76px; display:flex; align-items:center;justify-content:space-between;gap:18px;padding:14px 18px;border:1px solid var(--rule);background:rgba(3,11,24,.42); }
+    .card-main { display:flex;align-items:center;gap:15px;min-width:0; }
+    .dot { flex:none;width:8px;height:8px;border-radius:50%;background:var(--amber); }
+    .name { margin:0 0 4px;font-size:16px;font-weight:600;line-height:1.2; }
+    .keywords { margin:0;color:var(--muted);font-size:13px;letter-spacing:.01em; }
+    .arrow { flex:none;color:var(--amber);font-size:18px; }
+    .contact .card-main { flex:1; }
+    .email { flex:none;color:var(--muted);font-size:12px; }
+    footer { min-height:52px;margin-top:auto;border-top:1px solid var(--rule);display:grid;place-items:center;color:var(--muted);font-size:10px;letter-spacing:.18em; }
+    @media (min-width:1500px) { main { padding-top:62px; } figure { height:350px; } }
+    @media (max-width:900px) {
+      .page { padding-inline:28px; }
+      main { margin:0 auto;padding:40px 0; }
+      .intro { grid-template-columns:1fr .9fr;gap:30px; }
+      figure { height:270px; }
+      h1 { font-size:clamp(45px,6vw,62px); }
+      .description { font-size:16px; }
+    }
+    @media (max-width:650px) {
+      .page { padding-inline:20px; }
+      header { height:68px; }
+      .nav { font-size:12px; }
+      .nav .topic { display:none; }
+      main { padding:28px 0 25px; }
+      .intro { grid-template-columns:1fr;gap:25px;margin-bottom:25px; }
+      .copy { order:1; }
+      figure { order:0;height:220px; }
+      .kicker { margin-bottom:13px;font-size:11px; }
+      h1 { font-size:clamp(43px,12vw,62px); }
+      .description { margin-top:14px;font-size:15px; }
+      .links { grid-template-columns:1fr;gap:9px; }
+      .card { min-height:68px;padding:12px 14px; }
+      .email { font-size:10px; }
+      footer { min-height:45px; }
+    }
+    @media (max-width:380px) { .email { display:none; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand"><span class="mark">E</span><span>Echoid</span></div>
+      <div class="nav"><span class="topic">Teknoloji · Merak · Keşif</span><span>Hakkında ↗</span></div>
+    </header>
+    <main>
+      <section class="intro" aria-label="Echoid tanıtımı">
+        <div class="copy">
+          <p class="kicker">TEKNOLOJİYE MERAKLI MISIN?</p>
+          <h1>Teknolojiye başka bir açıdan bak.</h1>
+          <p class="description">Yapay zekâdan yazılıma, aklımıza takılan konuları beraber araştırıyoruz. Öğrendiklerimizi de seninle paylaşıyoruz.</p>
+        </div>
+        <figure><img src="../../public/assets/brand/echoid-website-hero-selected-v1.png" alt=""></figure>
+      </section>
+      <nav class="links" aria-label="Echoid bağlantıları">
+        <a class="card" href="https://www.youtube.com/@Echoid00"><span class="card-main"><i class="dot"></i><span><span class="name">YouTube</span><span class="keywords">teknoloji · yapay zekâ · merak</span></span></span><span class="arrow">↗</span></a>
+        <a class="card" href="https://github.com/RootKiddo13"><span class="card-main"><i class="dot"></i><span><span class="name">Projeler</span><span class="keywords">deneyler · araçlar · üretim</span></span></span><span class="arrow">↗</span></a>
+        <a class="card" href="https://x.com/Echoid00"><span class="card-main"><i class="dot"></i><span><span class="name">X</span><span class="keywords">notlar · keşifler · gündem</span></span></span><span class="arrow">↗</span></a>
+        <div class="card contact"><span class="card-main"><i class="dot"></i><span><span class="name">İletişim</span><span class="keywords">soru · öneri · iş birliği</span></span></span><span class="email">rootkiddo00@gmail.com</span></div>
+      </nav>
+    </main>
+    <footer>MERAK ETMEYE DEVAM.</footer>
+  </div>
+</body>
+</html>

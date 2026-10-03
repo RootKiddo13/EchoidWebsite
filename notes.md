@@ -86,3 +86,43 @@ A compact website companion for Echoid's Turkish technology channel, using the s
 - Adapt the responsive layout, skip link, visible focus, reduced-motion handling, modal focus management, Escape/backdrop closing, and viewport QA patterns.
 - Adapt the spec and agent-loop workflow as a clean Echoid-specific project process; do not copy RootKiddo-specific states or reports.
 - Echoid-specific changes: set the document language to Turkish, use Echoid's selected hero and canonical matte 3D identity, add an X link and glyph, and replace RootKiddo copy, colors, logos, and gecko motion overlays.
+
+## 2026-10-03 — Visual refresh preview
+
+- The user approved short keyword descriptors for YouTube, Projects, X, and Contact; the canonical copy is recorded in `design-locked.md`.
+- A visual-only redesign proposal is ready in `reports/previews/echoid-redesign-direction-01.png` (editable layout source: `reports/previews/echoid-redesign-direction-01.html`).
+- Proposal: editorial serif headline, compact Echoid wordmark, contained hero artwork, and keyword cards. Existing site code is untouched; await user review before implementation.
+
+## 2026-10-03 — Visual preview revision
+
+- The user rejected direction 01's contained-artwork treatment and liked the text/button arrangement.
+- Direction 02 uses the selected Echoid photograph full bleed, keeping the introduction above the two-by-two keyword cards on the open right side. Review `reports/previews/echoid-redesign-direction-02.png`.
+- Site implementation remains untouched pending visual review.
+
+## 2026-10-03 — Echoid typography preview
+
+- User approved direction 02's full-background photograph and right-side copy/card placement; type identity remains open.
+- Proposed Echoid treatment: condensed uppercase display, ivory/amber keyword contrast, a restrained focus-line marker, and quiet sans-serif supporting text.
+- Visual specimen: `reports/previews/echoid-type-direction-01.png`. No website source implementation yet; awaiting the user's typography review.
+
+## 2026-10-03 — Typography revision 02
+
+- User rejected the previous font and size, and requested a single font family for every site element.
+- New visual proposal uses IBM Plex Sans globally, smaller type, and a two-tone headline/focus-marker signature. Preview: `reports/previews/echoid-type-direction-02.png`.
+- Site source remains unchanged pending review.
+
+## 2026-10-03 — Destination card scale revision
+
+- User requested boxes 50% larger. Direction 03 raises card height from 78px to 117px and centers the content, preserving the two-column placement and type sizes.
+- Preview: `reports/previews/echoid-type-direction-03.png`; site implementation remains pending.
+
+## 2026-10-03 — Spec 09 implementation
+
+- The user approved preview direction 03 and asked to integrate it without changing the existing page structure.
+- Implementation scope: self-hosted IBM Plex Sans throughout; smaller two-tone tagline heading; approved keyword copy; 2×2 desktop destination grid with larger cards and a narrow one-column layout.
+- Keep the existing hero asset, external destinations, About dialog, contact email/static address behavior, and footer. Do not deploy or push.
+- Implementation and source/build review passed. The required `npm run check:data` and `npm run build` commands passed; the reviewer found and parent fixed a missing amber accent on “AÇIDAN.” Browser-rendered/runtime checks remain unverified.
+
+## 2026-10-03 — Final headline color
+
+- User requested only “AÇIDAN” remain amber; “BAŞKA” uses the normal headline color. The approved preview and site heading treatment were updated; `npm run check:data`, `npm run build`, and independent source/build review passed. User authorized publication; push is pending.

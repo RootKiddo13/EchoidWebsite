@@ -1,6 +1,5 @@
 ---
 import type { EchoidSiteData } from "../data/site";
-import LinkGlyph from "./LinkGlyph.astro";
 
 type HomeLink = EchoidSiteData["links"][number];
 
@@ -11,13 +10,17 @@ type Props = {
 const { link } = Astro.props;
 ---
 <a
-  class:list={["home-link-row", { "home-link-row--featured": link.id === "youtube" }]}
+  class="home-link-row"
   href={link.href}
   target="_blank"
   rel="noopener noreferrer"
-  aria-label={link.accessibleName}
+  aria-label={`${link.accessibleName}: ${link.keywords.split(" · ").join(", ")}`}
 >
-  <span class="home-link-icon"><LinkGlyph kind={link.id} /></span>
-  <span class="home-link-label">{link.label}</span>
-  <span class="home-link-arrow" aria-hidden="true">↗</span>
+  <span class="home-link-copy">
+    <span class="home-link-label">{link.label}</span>
+    <span class="home-link-keywords">{link.keywords}</span>
+  </span>
+  <svg class="home-link-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" />
+  </svg>
 </a>

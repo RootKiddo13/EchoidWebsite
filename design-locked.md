@@ -48,3 +48,63 @@ The user reviewed the current implementation and explicitly approved publishing 
 - User-directed Contact hover refinement (Spec 08): on hover-capable devices, give the static Contact row the other links' amber border response, with a small card lift/shadow and envelope-icon motion. Reduced-motion users get no movement. Preserve the readable email and non-interactive `<address>` behavior. Approved as part of the reviewed release.
 
 The implementation above is the reviewed release version. Future changes still require review before their production commit is pushed.
+
+## Approved copy for the next visual review — 2026-10-03
+
+The user approved concise keyword descriptors for the four destination rows:
+
+- YouTube — `teknoloji · yapay zekâ · merak`
+- Projeler — `deneyler · araçlar · üretim`
+- X — `notlar · keşifler · gündem`
+- İletişim — `soru · öneri · iş birliği`
+
+These labels are approved copy; the refreshed layout remains pending review.
+
+## Visual refresh direction 01 — Preview proposal, 2026-10-03
+
+- Promote “Teknolojiye başka bir açıdan bak.” to the main editorial headline; keep Echoid as the compact header wordmark.
+- Pair a serif display face with a sans-serif body/UI face.
+- Show the selected hero artwork in a contained frame instead of using it as a full-viewport background.
+- Place the approved keyword descriptors under each destination label in a two-column card grid.
+- Preserve the night-blue and amber palette, existing introduction, footer, confirmed destinations, and contact email.
+- Review preview at `reports/previews/echoid-redesign-direction-01.png` before implementing website changes. Proposal is not publication-approved.
+
+## Visual refresh direction 02 — Preview proposal, 2026-10-03
+
+- The user rejected direction 01 and asked for the selected photograph to return as a full-viewport background while retaining the text/button arrangement they liked.
+- Direction 02 keeps the introductory copy above the same two-by-two destination card grid and places the group over the photograph's open right side.
+- This remains a visual proposal only. Review `reports/previews/echoid-redesign-direction-02.png` before any site implementation.
+
+## Layout approved, typography open — 2026-10-03
+
+The user approved visual direction 02's full-viewport Echoid photograph and the right-side introduction with a two-by-two destination grid. Approval covers this composition and the previously approved keyword labels; type styling remains under review.
+
+## Echoid type direction 01 — Preview proposal, 2026-10-03
+
+- Use a tall, condensed, uppercase display style for the main statement, with the key words “BAŞKA” and “AÇIDAN” in Echoid amber.
+- Pair it with a clean, restrained sans-serif for body copy and link details.
+- Repeat a small amber focus mark/line as the page's typographic signature, drawing on Echoid's curious investigator character without copying the supplied creators' thumbnail styles.
+- Preview: `reports/previews/echoid-type-direction-01.png`. The corrected image uses Bahnschrift SemiCondensed Bold, which supports the Turkish uppercase glyphs in the specimen; production font/asset choice remains open until visual approval.
+- No website source changes are approved yet.
+
+## Echoid type direction 02 — Preview proposal, 2026-10-03
+
+- Direction 01 was rejected: the user disliked the display font and found the text too large.
+- Use IBM Plex Sans as the single font family site-wide. The same family applies to the logo, header, headline, body, destination cards, About dialog, and footer; express hierarchy only through weight, size, width, and color.
+- Reduce the headline to a restrained desktop scale and keep body/link text compact and readable.
+- Create Echoid's signature with a two-tone ivory/amber headline and a small amber focus marker, without adding another typeface.
+- Preview: `reports/previews/echoid-type-direction-02.png`. No website source changes until review.
+
+## Destination card size revision — Preview proposal, 2026-10-03
+
+- The user asked to enlarge the destination boxes by 50% while retaining the two-column placement.
+- Preview direction 03 increases card height from 78px to 117px and vertically centers each card's contents. The two-column width remains fixed to preserve the approved right-side composition.
+- Preview: `reports/previews/echoid-type-direction-03.png`. This is not implemented in the website source yet.
+
+## Approved implementation — 2026-10-03
+
+The user approved preview direction 03 for implementation. The approval covers the full-bleed selected photograph, right-side text placement, one IBM Plex Sans family site-wide, the smaller two-tone heading, approved link keywords, and 117px-tall two-column desktop cards. The site source may now be updated within Spec 09. Deployment still requires a separate review and explicit request.
+
+## Final headline color correction — 2026-10-03
+
+The user approved the final color treatment: **only “AÇIDAN” is amber**; “BAŞKA” uses the standard headline color. This overrides earlier preview iterations that highlighted both words.

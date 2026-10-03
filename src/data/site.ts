@@ -1,8 +1,7 @@
 /**
  * Central, typed content and destination data for the Echoid website.
  *
- * The home and About copy below comes from the preview proposals in
- * design-locked.md. It is draft copy pending user review, not approved final copy.
+ * Approved home/About copy, destinations, and compact link descriptors.
  */
 export interface EchoidSiteData {
   identity: {
@@ -16,14 +15,17 @@ export interface EchoidSiteData {
   };
   contact: {
     email: string;
+    keywords: string;
   };
-  /** Preview proposal copy, pending user review. */
+  /** Approved home copy plus its display line break and emphasized word. */
   home: {
     kicker: string;
     tagline: string;
+    taglineLineBreakAfter: string;
+    taglineEmphasis: string;
     description: string;
   };
-  /** Preview proposal copy, pending user review. */
+  /** User-approved About copy. */
   about: {
     title: string;
     paragraphs: readonly [string];
@@ -37,6 +39,7 @@ interface YouTubeLink {
   id: "youtube";
   label: "YouTube";
   accessibleName: "Echoid'in YouTube kanalı";
+  keywords: "teknoloji · yapay zekâ · merak";
   href: string;
 }
 
@@ -44,6 +47,7 @@ interface ProjectsLink {
   id: "projects";
   label: "Projeler";
   accessibleName: "Echoid'in GitHub projeleri";
+  keywords: "deneyler · araçlar · üretim";
   href: string;
 }
 
@@ -51,6 +55,7 @@ interface XLink {
   id: "x";
   label: "X";
   accessibleName: "Echoid'in X profili";
+  keywords: "notlar · keşifler · gündem";
   href: string;
 }
 
@@ -69,10 +74,13 @@ export const siteData = {
   contact: {
     // Keep this as plain email data; do not infer mailto behavior here.
     email: "rootkiddo00@gmail.com",
+    keywords: "soru · öneri · iş birliği",
   },
   home: {
     kicker: "TEKNOLOJİYE MERAKLI MISIN?",
     tagline: "Teknolojiye başka bir açıdan bak.",
+    taglineLineBreakAfter: "başka",
+    taglineEmphasis: "açıdan",
     description:
       "Yapay zekâdan yazılıma, aklımıza takılan konuları beraber araştırıyoruz. Öğrendiklerimizi de seninle paylaşıyoruz.",
   },
@@ -88,18 +96,21 @@ export const siteData = {
       id: "youtube",
       label: "YouTube",
       accessibleName: "Echoid'in YouTube kanalı",
+      keywords: "teknoloji · yapay zekâ · merak",
       href: publicUrls.youtube,
     },
     {
       id: "projects",
       label: "Projeler",
       accessibleName: "Echoid'in GitHub projeleri",
+      keywords: "deneyler · araçlar · üretim",
       href: publicUrls.projects,
     },
     {
       id: "x",
       label: "X",
       accessibleName: "Echoid'in X profili",
+      keywords: "notlar · keşifler · gündem",
       href: publicUrls.x,
     },
   ],
