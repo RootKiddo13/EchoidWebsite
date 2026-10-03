@@ -192,3 +192,9 @@
 - `npm run check:data`, `npm run build`, and `git diff --check` passed. Independent source/build reviewer returned PASS; after review found the missing amber “AÇIDAN” emphasis, the implementation was corrected and re-reviewed.
 - Browser-rendered desktop/mobile visuals, live console, and runtime font glyph checks were not performed. No push or deployment was made.
 - Handoff and review: `agent-loop/spec-09-builder-handoff.md`, `reports/agent-loop/spec-09-review.md`.
+
+## 2026-10-03 — Final headline color and production release — PASS
+
+- User requested that only “AÇIDAN” remain amber; “BAŞKA” now uses the standard paper color. `npm run check:data`, `npm run build`, and `git diff --check` passed; final independent source/build review returned PASS.
+- Pushed approved site changes to `main` in commit `624726cb79cd3802c252914210037e2fa1f3140c`. Cloudflare Pages published `https://echoid.pages.dev/`; the production desktop view was visually checked in the in-app browser.
+- Mobile viewport and live-console checks were not repeated. Existing user changes to `.gitignore`, `astro.config.mjs`, and `.wrangler/` were excluded from the release.

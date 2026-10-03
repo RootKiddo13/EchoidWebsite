@@ -120,9 +120,9 @@ A compact website companion for Echoid's Turkish technology channel, using the s
 
 - The user approved preview direction 03 and asked to integrate it without changing the existing page structure.
 - Implementation scope: self-hosted IBM Plex Sans throughout; smaller two-tone tagline heading; approved keyword copy; 2×2 desktop destination grid with larger cards and a narrow one-column layout.
-- Keep the existing hero asset, external destinations, About dialog, contact email/static address behavior, and footer. Do not deploy or push.
+- Keep the existing hero asset, external destinations, About dialog, contact email/static address behavior, and footer.
 - Implementation and source/build review passed. The required `npm run check:data` and `npm run build` commands passed; the reviewer found and parent fixed a missing amber accent on “AÇIDAN.” Browser-rendered/runtime checks remain unverified.
 
 ## 2026-10-03 — Final headline color
 
-- User requested only “AÇIDAN” remain amber; “BAŞKA” uses the normal headline color. The approved preview and site heading treatment were updated; `npm run check:data`, `npm run build`, and independent source/build review passed. User authorized publication; push is pending.
+- User requested only “AÇIDAN” remain amber; “BAŞKA” uses the normal headline color. The approved preview and site heading treatment were updated; `npm run check:data`, `npm run build`, and independent source/build review passed. The user authorized publication, and the site is live at `https://echoid.pages.dev/` from commit `624726cb79cd3802c252914210037e2fa1f3140c`.

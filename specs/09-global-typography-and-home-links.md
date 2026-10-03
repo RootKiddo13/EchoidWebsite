@@ -1,7 +1,7 @@
 # Spec 09 — Global Typography and Home Links
 
 **Type:** User-approved visual refresh
-**Status:** PASS for source/build review; user-authorized deployment pending
+**Status:** PASS — deployed to Cloudflare Pages on 2026-10-03
 **Approved preview:** `reports/previews/echoid-type-direction-03.png`
 
 ## Goal

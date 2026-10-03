@@ -39,7 +39,7 @@ Each phase follows the builder → reviewer → fixer verification flow in [agen
 - Read all channel destinations from const.md through one site-data layer.
 - Use only the user-selected Echoid hero asset.
 - Use only approved decisions or the preview proposals recorded in design-locked.md; keep proposals marked pending review.
-- Do not deploy, host, or configure a domain.
+- Do not change hosting/domain settings; deployment requires an explicit user request and review.
 - agents.md and claude.md must remain identical.
 
 ## Current status
@@ -47,7 +47,7 @@ Each phase follows the builder → reviewer → fixer verification flow in [agen
 - Spec set: **Approved for implementation order by user on 2026-09-17**
 - Full design: **Direction 03 approved for implementation on 2026-10-03**; deployment still requires a separate review.
 - Implementation: **Phases 01–06 PASS; Specs 07–08 PASS.** Phase 04 reduced-motion runtime behavior and all dialog close/focus paths passed at desktop and narrow widths. Phase 05 passed four viewport, keyboard, focus, and overflow checks. Phase 06 build, link, asset, and console checks passed. Evidence: `reports/agent-loop/phase-04-final-review.md`, `reports/agent-loop/phase-05-review.md`, and `reports/agent-loop/phase-06-review.md`.
-- Spec 09 — Global Typography and Home Links: **PASS for source/build review; deployment authorized and pending push**. Only `AÇIDAN` is amber. Browser-rendered/runtime checks remain unverified.
-- Production: current release remains at `https://echoid.pages.dev/`; do not push or deploy this revision without a fresh human review.
+- Spec 09 — Global Typography and Home Links: **PASS and deployed**; only `AÇIDAN` is amber. Desktop production view was visually confirmed; mobile and live-console checks were not repeated.
+- Production: `https://echoid.pages.dev/`, deployment commit `624726cb79cd3802c252914210037e2fa1f3140c`. No hosting or domain settings changed.
 - Hosting constraint: **$0 total cost**. Planned target is a private GitHub repository connected to Cloudflare Pages Free, using only the provider-assigned `pages.dev` hostname. No domain purchase or paid service.
 - Start condition: implementation was explicitly authorized on 2026-09-17; publication still requires full user review.

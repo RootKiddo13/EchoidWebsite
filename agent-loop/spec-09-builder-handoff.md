@@ -3,7 +3,7 @@
 - Phase: User-directed visual refresh
 - Spec: `specs/09-global-typography-and-home-links.md`
 - Agent role: Builder / orchestrator
-- Status: PASS — final color adjustment, required checks, and independent source/build review complete; authorized production push pending.
+- Status: PASS — final color adjustment, checks, independent source/build review, and production deployment complete.
 - Summary: Integrated the approved visual direction in the existing Astro component tree. Typography now inherits one self-hosted IBM Plex Sans variable family; the approved two-tone heading and keyword descriptors appear in larger destination cards.
 
 ## Files changed
@@ -38,13 +38,14 @@
 - Built output inspection — PASS; exactly one `.hero-title-accent` span wraps `açıdan`, and both font assets are present.
 - Reviewer — PASS for final source/build review; `reports/agent-loop/spec-09-review.md`.
 - `git diff --check` — PASS; no whitespace errors. Git emitted only expected working-copy LF/CRLF normalization warnings.
-- Browser-rendered desktop/mobile screenshot and live console check — not run in this turn.
+- Production desktop page visually confirmed in the in-app browser at its default 1280×720 viewport; “AÇIDAN” is amber and “BAŞKA” is paper colored.
+- Mobile viewport and live-console checks were not repeated after deployment.
 
 ## Open issues / limits
 
 - Browser-rendered desktop/mobile comparison, live console, and runtime font/glyph rendering were not verified.
-- This revision has not been pushed yet. Cloudflare Pages deploys from `main`; the user has authorized this release.
+- Deployment is live at `https://echoid.pages.dev/`, commit `624726cb79cd3802c252914210037e2fa1f3140c`.
 
 ## Recommended next step
 
-Stage only this task's files and publish the approved revision to `main`.
+No further action; retain the local uncommitted user changes outside this release.

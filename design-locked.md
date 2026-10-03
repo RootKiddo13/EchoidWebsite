@@ -108,3 +108,7 @@ The user approved preview direction 03 for implementation. The approval covers t
 ## Final headline color correction — 2026-10-03
 
 The user approved the final color treatment: **only “AÇIDAN” is amber**; “BAŞKA” uses the standard headline color. This overrides earlier preview iterations that highlighted both words.
+
+## Spec 09 release — 2026-10-03
+
+Spec 09 passed source/build review and was deployed to the existing Cloudflare Pages site at `https://echoid.pages.dev/` from commit `624726cb79cd3802c252914210037e2fa1f3140c`. The production desktop page was visually checked in the in-app browser; mobile viewport and console checks were not repeated.
